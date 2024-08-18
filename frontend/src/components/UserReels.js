@@ -11,7 +11,7 @@ const UserReels = ({ userId }) => {
                 setLoading(true);
                 setError(null);
                 try {
-                    const response = await fetch(`http://localhost:5000/api/reels/${userId}`);
+                    const response = await fetch(`/api/reels/${userId}`);
                     if (!response.ok) {
                         const errorData = await response.json();
                         throw new Error(errorData.message || 'Failed to fetch reels');
